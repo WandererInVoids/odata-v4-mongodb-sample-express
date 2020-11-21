@@ -72,7 +72,7 @@ class ProductCollection {
 			if (query.hasOwnProperty(prop)) {
 				if (prop === '$filter') {
 					// used for skip special character in eq and other
-					// some framework and server aplayed default URI escape this just to be safe
+					// some framework and server aplayed default URI transfor this just to be safe
 					query[prop] = encodeURIComponent(query[prop]);
 				}
 				str += `${prop}=${query[prop]}&`;
